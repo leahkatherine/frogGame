@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Frog Game</title>
+    <style>
+        .collapse {
+            display: none;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("#btnHideHat").click(function(){
+                $("#noHat").addClass("collapse");
+                $("#showCowboyHat").removeClass("collapse");
+                $("#btnHideHat").hide();
+                $("h1").text("You win");
+                $("#winMessage").removeClass("collapse");
+                $("h3").show();
+                $("h2").hide(); // Show the <h3> element
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Frog Game</h1>
+            <h2>Have you seen my hat?</h2>
+        </div>
+        <div>
+            <img id="noHat" src="/img/noHatFrog.jfif"/>
+            <img id="showCowboyHat" class="collapse" src="/img/cowboyHatFrog.jfif"/>
+        </div>
+        <div>
+            <button class="btn" id="btnHideHat">Help him</button>
+        </div>
+    </header>
+    <h3 style="display: none;">Thank you for finding my hat partner, I'm off to the casino!</h3>
+</body>
+</html>
